@@ -1,0 +1,160 @@
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #222;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+header {
+  background: #222;
+  color: #fff;
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header .header-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header .nav-links {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  gap: 1.5rem;
+}
+
+header .nav-links a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+header .nav-links a:hover {
+  color: #f01010;
+}
+
+.image {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.image1 {
+  border-radius: 50%;
+  border: 2px solid #007bff;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+
+.hero {
+  text-align: center;
+  padding: 4rem 0;
+  background: #f4f4f4;
+}
+
+.hero span {
+  color: #f01010;
+}
+
+.cta-btn {
+  background: #f01010;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  text-decoration: none;
+  border-radius: 5px;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.cta-btn:hover {
+  background-color: #944343;
+}
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.project-card {
+  padding: 2rem;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background: #fff;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.project-card h2 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  color: #222;
+  position: relative;
+  overflow: hidden;
+}
+
+.project-card h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: #f01010;
+  transition: width 0.3s ease;
+}
+
+.project-card:hover h2::after {
+  width: 100%;
+}
+
+.project-card p {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.project-card:hover p {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+footer {
+  background: #222;
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.social-links a {
+  margin: 0 10px;
+  display: inline-block;
+}
+
+.social-links img {
+  width: 30px;
+  height: 30px;
+  border-radius: 20px;
+}
